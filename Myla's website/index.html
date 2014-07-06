@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	<h1>Stop! Look! and Listen! About Me</h1>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<!-- <script type="text/javascript" src="/js/script.js"></script> <script type="text/javascript" src="/js/jquery.js"></script> -->
+		<script>
+		$(document).ready(function(){
+		var numImages = 0;
+		var currentImage = 1;
+		var totalWidth = 0;
+			$('.gallery-li').each(function(){
+				numImages=numImages + 1;
+				totalWidth+= 570;
+				console.log(numImages);
+				console.log(totalWidth);
+			});
+			$('.gallery-ul').css('width', totalWidth);
+			$('.rightbtn-inner').click(function(){
+				moveLeft();
+			});
+			$('.leftbtn-inner').click(function(){
+				moveRight();
+			});
+		function moveLeft(){
+			if(currentImage<numImages){
+				$('.gallery-ul').animate({'marginLeft':'-=570px'},1000,'swing');
+				currentImage++;
+				console.log("moved left!");
+			}
+			}
+		function moveRight(){
+			if(currentImage>1){
+				$('.gallery-ul').animate({'marginLeft':'+=570px'},1000,'swing');
+				currentImage--;
+				console.log("moved right!");
+			}
+			}
+		}
+			);
+		</script>
+	</head>
+	<body>
+
+		<div class="topright"><img src="http://i.imgur.com/xpNScAo.gif" alt="alternate text" width="275" height="200">
+		<br>Hello!</br></div>
+		<div class="box">
+			<div class="center">
+				<img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/000/101/181/3cbe870.jpg" border="5" solid #CCCCCC>
+			</div>
+			<p> Hi, I'm Myla. I don't originally come from a background in programming. I went to Mills College in Oakland, CA, and graduated with a BA in Studio Art and a minor in Psychology.
+			</p>
+			<p>
+			Contact me through email at: myla.baker@gmail.com or submit your email below and I will get back to you!
+			</p>
+			<p>
+			<input type="email" placeholder="Your email">
+			<input type="submit">
+			</p>
+			<p> Another thing you should know about me is that I love dogs. Please enjoy these dogs in bow ties!</p>
+			<div class="gallery-wrapper">
+				<div class="gallery-mask">
+					<ul class="gallery-ul">
+						<li class="gallery-li">
+							<img class="gallery-img" src="http://2.bp.blogspot.com/-1FGmDL-YlaA/TkQBxy0EjGI/AAAAAAAAJ6w/Srua-bgeAaI/s1600/aa2.jpg">
+						</li>
+						<li class="gallery-li">
+							<img class="gallery-img" src="http://d1xejl9xcsndu9.cloudfront.net/wp-content/uploads/2013/05/2_DogIDo_636x431.gif">
+						</li>
+						<li class="gallery-li">
+							<img class="gallery-img" src="http://planetgirly.files.wordpress.com/2012/09/dog-bow-tie.jpg">
+						</li>
+						<li class="gallery-li">
+							<img class="gallery-img" src="http://a.dilcdn.com/bl/wp-content/uploads/sites/8/2013/04/il_570xN.244366145.jpg">
+						</li>
+					</ul>
+					
+					<div class="leftbtn">
+						<div class="leftbtn-inner"></div>
+					</div>
+					<div class="rightbtn">
+						<div class="rightbtn-inner"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottomleft">
+			<img src="http://i.imgur.com/nDMdS.jpg" alt="alternate text" width="275" height="225">
+		<br>Bye for now!</br></div>
+		</body>

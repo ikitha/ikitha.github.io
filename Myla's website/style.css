@@ -1,3 +1,4 @@
+
 .banner {
 	color: rgba(255,0,255,1);
 	background: purple;
@@ -23,13 +24,11 @@ h1 {
 	padding-left: 2px;
 }
 .topright {
-	position: absolute;
-	text-align: center;
-	margin-top: -80px;
+	text-align: right;
+	margin-top: -100px;
 	font-style: italic;
 	color: white;
-	top: 7%;
-	right: 0%;
+	padding-bottom: 10px;
 }
 .center {
 	position: relative;
@@ -46,10 +45,12 @@ p {
 }
 .gallery-wrapper {
 	width: 570px;
-	height: 465px;
+	height: 405px;
 	margin: 50px auto 0 auto;
 	border: 3px solid #fff;
 	position: relative;
+	overflow: hidden;
+
 }
 .gallery-mask {
 	width: 570px;
@@ -58,8 +59,10 @@ p {
 }
 .gallery-ul {
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
 	height: 465px;
-	width: auto;
+	width: 570px;
 }
 .gallery-li {
 	float: left;
@@ -73,7 +76,7 @@ p {
 	top: 0px;
 	left: 0px;
 	background: #666;
-	opacity: .2;
+	opacity: 0.4;
 	display: none;
 }
 .rightbtn {
@@ -83,7 +86,7 @@ p {
 	top: 0px;
 	right: 0px;
 	background: #666;
-	opacity: .2;
+	opacity: 0.4;
 	display: none;
 }
 
@@ -94,14 +97,25 @@ p {
 }
 .leftbtn: hover,
 .rightbtn: hover {
-	opacity: .5;
+	opacity: 0.8;
 }
-.rightbtn-inner,
+.rightbtn-inner {
+		width: 0; 
+	height: 0; 
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	
+	border-left: 60px solid white;
+
+	margin: 150px auto 0 auto;
+}
 .leftbtn-inner {
-	width: 35px;
-	height: 80px;
-	margin: 140px auto 0 auto;
-	background: #ff0000;
+	width: 0; 
+	height: 0; 
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-right:60px solid white; 
+	margin: 150px auto 0 auto;
 }
 .leftbtn-inner: hover {
 	background-position: -35px 0;
@@ -109,14 +123,20 @@ p {
 .rightbtn-inner: hover {
 	background-position: 0px 0;
 }
+.box {
+	border:5px solid #CCC;
+	background-color:rgba(0,0,20,.5);
+	border-radius:10px;
+	padding:10px;
+	width: 960px;
+	margin: 0 auto;
+}
 .bottomleft {
-	position: absolute;
-	text-align: center;
+	text-align: left;
 	font-style: italic;
 	color: white;
-	bottom: 0%;
-	left: 0;
 	z-index: 1;
+	padding-top: 10px;
 }
 .bottombanner {
 	color: rgba(255,0,255,1);
@@ -125,25 +145,14 @@ p {
 	background: -webkit-linear-gradient(bottom, rgba(200,0,200,.3), rgba(0,0,0,1));
 	background: -moz-linear-gradient(bottom, rgba(200,0,200,.3), rgba(0,0,0,1));
 	height: 250px;
-	position: absolute;
 	width: 100%;
-	z-index: 0;
-	bottom: 0%;
-	left: 0;
-	right: 0;
+
 }
-background {
-	z-index: 0;
-	height: 100%;
-	width: 100%;
-	background-position: absolute;
-	bottom: 0;
-}
+
 body { 
 background-color: #fff; 
-background-image: 'http://i.imgur.com/OoCslzC.jpg'; 
-background-repeat: no-repeat; 
-background-position: center center; 
-background-attachment: scroll; 
+background-image: url('http://i.imgur.com/OoCslzC.jpg'); 
+background-repeat: repeat-y;
+background-size: cover;
 z-index: -1;
 } 
